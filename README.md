@@ -18,8 +18,11 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 ## 📦 Instalación y ejecución
 1.Clona el repositorio
+
 2.Instala dependencias con npm install
+
 3.Ejecuta el proyecto con npm run dev
+
 4.Abrir en el navegador http://localhost:5173
 
 🔑 API utilizada
