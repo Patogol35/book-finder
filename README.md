@@ -26,7 +26,9 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 4.Abrir en el navegador http://localhost:5173
 
 🔑 API utilizada
+
 Este proyecto usa la API pública de Google Books
+
 No requiere autenticación para búsquedas básicas.
 
 💡 Autor: Jorge Patricio Santamaría Cherrez
