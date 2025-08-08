@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+nav {
+  background-color: #2d3436;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0984e3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #74b9ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card .actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card .actions a,
+.card .actions button {
+  flex: 1;
+  text-align: center;
+  padding: 0.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #00b894;
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #55efc4;
+}
+
+.btn-yellow {
+  background-color: #fdcb6e;
+  color: white;
+}
+
+.btn-yellow:hover {
+  background-color: #ffeaa7;
+}
