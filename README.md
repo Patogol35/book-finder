@@ -14,7 +14,7 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 ---
 
-🎯 Funcionalidades
+✨ Funcionalidades
 
 ✅ Búsqueda de libros por título o autor  
 ✅ Vista detallada de un libro (imagen, autor, descripción)  
