@@ -34,7 +34,7 @@ git clone https://github.com/Patogol35/book-finder
 
 cd book-finder
 
-3.Instala dependencias: 
+3.Instala las dependencias: 
 
 npm install
 
