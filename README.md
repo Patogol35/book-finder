@@ -42,8 +42,8 @@ No requiere autenticación para búsquedas básicas.
 
 ---
 
-💡 Autor: 
+👨‍💻 Autor
 
 Jorge Patricio Santamaría Cherrez
-
 Máster en Ingeniería de Software y Sistemas Informáticos
+
