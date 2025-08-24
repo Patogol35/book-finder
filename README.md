@@ -26,13 +26,25 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 📦 Instalación y ejecución
 
-1.Clona el repositorio
+1.Clona el repositorio: 
 
-2.Instala dependencias con npm install
+git clone https://github.com/Patogol35/book-finder
 
-3.Ejecuta el proyecto con npm run dev
+2. Ingresa a la carpeta del proyecto:
 
-4.Abrir en el navegador http://localhost:5173
+cd book-finder
+
+3.Instala dependencias: 
+
+npm install
+
+4.Ejecuta el proyecto:
+
+npm run dev
+
+5.Abrir en el navegador:
+
+http://localhost:5173
 
 🔑 API utilizada
 
