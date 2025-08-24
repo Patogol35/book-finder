@@ -4,7 +4,7 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 ---
 
-🚀 Tecnologías utilizadas
+⚙️ Tecnologías utilizadas
 
 - React (Vite)
 - JavaScript (ES6+)
