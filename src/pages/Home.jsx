@@ -14,11 +14,15 @@ export default function Home() {
   return (
     <div className="page-container">
       <SearchBar onSearch={handleSearch} />
-      <div className="books-grid">
-        {books.map((book) => (
-          <BookCard key={book.id} book={book} />
-        ))}
-      </div>
+      {books.length === 0 ? (
+        <p className="empty">Busca libros para mostrarlos aquí.</p>
+      ) : (
+        <div className="books-grid">
+          {books.map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
