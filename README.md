@@ -4,6 +4,10 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 ---
 
+Ver la aplicación desplegada en Vercel:
+
+---
+
 ⚙️ Tecnologías utilizadas
 
 - React (Vite)
