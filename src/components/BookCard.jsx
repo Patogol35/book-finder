@@ -9,11 +9,6 @@ export default function BookCard({ book }) {
   // Verificar si ya está en favoritos
   const isFavorite = favorites.some(fav => fav.id === book.id);
 
-  // Truncar descripción para la tarjeta
-  const shortDescription = info.description
-    ? info.description.slice(0, 100) + (info.description.length > 100 ? "..." : "")
-    : "Sin descripción";
-
   return (
     <div className="book-card">
       <p className="author">{info.authors?.join(", ") || "Autor desconocido"}</p>
@@ -22,7 +17,6 @@ export default function BookCard({ book }) {
         src={info.imageLinks?.thumbnail || "https://via.placeholder.com/150"}
         alt={`Portada de ${info.title}`}
       />
-      <p className="description">{shortDescription}</p>
       <div className="actions">
         <Link to={`/book/${book.id}`}>Ver más</Link>
         <button
