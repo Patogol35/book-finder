@@ -12,9 +12,10 @@ export default function Home() {
   };
 
   return (
-    <div className="p-6">
+    <div className="container">
+      <h1>📚 Explora Libros</h1>
       <SearchBar onSearch={handleSearch} />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="books-grid">
         {books.map(book => (
           <BookCard key={book.id} book={book} />
         ))}
