@@ -1,8 +1,15 @@
-export default function SearchBar({ onSearch, query, setQuery }) {
+import { useState, useEffect } from "react";
+
+export default function SearchBar({ onSearch, query }) {
+  const [localQuery, setLocalQuery] = useState(query || "");
+
+  useEffect(() => {
+    setLocalQuery(query);
+  }, [query]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (query.trim()) onSearch(query);
+    if (localQuery.trim()) onSearch(localQuery);
   };
 
   return (
@@ -10,8 +17,8 @@ export default function SearchBar({ onSearch, query, setQuery }) {
       <input
         type="text"
         placeholder="Buscar por título o autor..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={localQuery}
+        onChange={(e) => setLocalQuery(e.target.value)}
         className="border rounded-lg px-4 py-2 w-full"
       />
       <button type="submit" className="btn primary">
