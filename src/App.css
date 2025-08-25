@@ -5,19 +5,6 @@
   padding: 2rem;
 }
 
-/* Título */
-.page-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-/* Texto vacío */
-.empty {
-  color: #777;
-  font-style: italic;
-}
-
 /* Grid de libros */
 .books-grid {
   display: grid;
@@ -39,6 +26,7 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  border: 1px solid #e5e7eb; /* separador profesional */
 }
 
 .book-card:hover {
@@ -46,6 +34,7 @@
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
+/* Imagen */
 .book-card img {
   border-radius: 10px;
   height: 260px;
@@ -60,22 +49,7 @@
   transform: scale(1.05);
 }
 
-.book-card .author {
-  font-size: 0.85rem;
-  color: #6b7280;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  text-align: center;
-}
-
-.book-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #1f2937;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
+/* Botones */
 .book-card .actions {
   display: flex;
   justify-content: center;
@@ -123,4 +97,12 @@
 
 .book-card button.remove:hover {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* Texto vacío */
+.empty {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
 }
