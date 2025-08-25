@@ -16,11 +16,24 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 ✨ Funcionalidades
 
-- Búsqueda de libros por título o autor  
-- Vista detallada de un libro (imagen, autor, descripción)  
-- Guardar libros en una lista de favoritos  
-- Persistencia de favoritos con `localStorage`  
-- Diseño responsive y moderno  
+- Búsqueda de libros por título o autor.
+
+Los resultados se mantienen visibles al navegar entre páginas gracias a SearchContext.
+
+
+- Vista detallada de un libro: imagen, autor(es) y descripción.
+
+- Guardar libros en favoritos: añadir o quitar libros de la lista.
+
+- Persistencia de favoritos usando localStorage.
+
+- Diseño moderno, profesional y responsive
+
+- Gestión de búsqueda centralizada:
+
+La búsqueda se mantiene globalmente en la app sin depender de recargas.
+
+Si el input se borra y haces submit, los resultados desaparecen automáticamente. 
 
 ---
 
