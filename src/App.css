@@ -55,90 +55,110 @@ p.empty {
 /* === Grid de libros === */
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* === Tarjeta de libro === */
+/* === Tarjeta de libro estilo ficha === */
 .book-card {
-  background: white;
-  border-radius: 14px;
+  background: #fff;
+  border-radius: 16px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 }
 
 .book-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-.book-card img {
-  border-radius: 8px;
-  max-height: 220px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+/* Autor arriba */
+.book-card p.author {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  text-align: center;
 }
 
+/* Título centrado */
 .book-card h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #222;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
 }
 
-.book-card p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
+/* Imagen del libro */
+.book-card img {
+  border-radius: 10px;
+  height: 260px;
+  width: auto;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  background: #f9fafb;
 }
 
-/* === Botones === */
+/* Botones abajo */
 .book-card .actions {
-  margin-top: auto;
   display: flex;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
-.book-card button,
-.book-card a {
+.book-card a,
+.book-card button {
   border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: 9999px; /* estilo pill */
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.25s ease;
 }
 
+/* Botón Ver más */
 .book-card a {
-  background: #16a34a; /* Verde */
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   color: white;
 }
 
 .book-card a:hover {
-  background: #15803d;
+  background: linear-gradient(135deg, #16a34a, #15803d);
   transform: scale(1.05);
 }
 
+/* Botón Favorito */
 .book-card button {
-  background: #eab308; /* Amarillo */
-  color: white;
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: #1f2937;
 }
 
 .book-card button:hover {
-  background: #ca8a04;
+  background: linear-gradient(135deg, #eab308, #ca8a04);
   transform: scale(1.05);
 }
 
+/* Botón Quitar (favorito activo) */
 .book-card button.remove {
-  background: #ef4444; /* Rojo */
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
 }
 
 .book-card button.remove:hover {
-  background: #dc2626;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 
 /* === Página de detalles === */
