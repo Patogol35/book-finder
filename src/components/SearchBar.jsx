@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-export default function SearchBar({ onSearch }) {
-  const [query, setQuery] = useState("");
+export default function SearchBar({ onSearch, query, setQuery }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
