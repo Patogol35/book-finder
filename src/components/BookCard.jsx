@@ -3,14 +3,17 @@ import { useContext } from "react";
 import { FavoritesContext } from "../context/FavoritesContext";
 
 export default function BookCard({ book }) {
-  const { addFavorite } = useContext(FavoritesContext);
+  const { favorites, addFavorite, removeFavorite } = useContext(FavoritesContext);
   const info = book.volumeInfo;
+
+  // Verificar si ya está en favoritos
+  const isFavorite = favorites.some(fav => fav.id === book.id);
 
   return (
     <div className="border rounded-lg shadow p-4 flex flex-col">
       <img
         src={info.imageLinks?.thumbnail || "https://via.placeholder.com/150"}
-        alt={info.title}
+        alt={`Portada de ${info.title}`}
         className="mb-3 rounded"
       />
       <h3 className="font-bold text-lg">{info.title}</h3>
@@ -20,10 +23,10 @@ export default function BookCard({ book }) {
           Ver más
         </Link>
         <button
-          onClick={() => addFavorite(book)}
-          className="bg-yellow-500 text-white px-3 py-1 rounded"
+          onClick={() => isFavorite ? removeFavorite(book.id) : addFavorite(book)}
+          className={`${isFavorite ? "bg-red-500" : "bg-yellow-500"} text-white px-3 py-1 rounded`}
         >
-          Favorito
+          {isFavorite ? "Quitar" : "Favorito"}
         </button>
       </div>
     </div>
