@@ -10,20 +10,19 @@ export default function Detail() {
     getBookById(id).then(setBook);
   }, [id]);
 
-  if (!book) return <p className="p-6">Cargando...</p>;
+  if (!book) return <p className="container">Cargando...</p>;
 
   const info = book.volumeInfo;
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">{info.title}</h1>
-      <p className="text-gray-600">{info.authors?.join(", ")}</p>
+    <div className="detail-container">
+      <h1>{info.title}</h1>
+      <p className="author">{info.authors?.join(", ")}</p>
       <img
-        src={info.imageLinks?.thumbnail || "https://via.placeholder.com/150"}
+        src={info.imageLinks?.thumbnail || "https://via.placeholder.com/200"}
         alt={info.title}
-        className="my-4"
       />
-      <p>{info.description || "Sin descripción"}</p>
+      <p className="description">{info.description || "Sin descripción disponible."}</p>
     </div>
   );
 }
