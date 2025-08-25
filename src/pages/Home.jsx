@@ -12,8 +12,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
-      <h1>📚 Explora Libros</h1>
+    <div className="p-6 container">
       <SearchBar onSearch={handleSearch} />
       <div className="books-grid">
         {books.map(book => (
