@@ -3,21 +3,24 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import FavoritesPage from "./pages/FavoritesPage";
 import { FavoritesProvider } from "./context/FavoritesContext";
+import { SearchProvider } from "./context/SearchContext";
 
 export default function App() {
   return (
     <FavoritesProvider>
-      <Router>
-        <nav>
-          <Link to="/">Inicio</Link>
-          <Link to="/favorites">Favoritos</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/book/:id" element={<Detail />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-        </Routes>
-      </Router>
+      <SearchProvider>
+        <Router>
+          <nav>
+            <Link to="/">Inicio</Link>
+            <Link to="/favorites">Favoritos</Link>
+          </nav>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/book/:id" element={<Detail />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+          </Routes>
+        </Router>
+      </SearchProvider>
     </FavoritesProvider>
   );
 }
