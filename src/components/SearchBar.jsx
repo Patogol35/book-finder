@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 export default function SearchBar({ onSearch, query }) {
   const [localQuery, setLocalQuery] = useState(query || "");
 
+  // Mantener input sincronizado con la query global
   useEffect(() => {
     setLocalQuery(query);
   }, [query]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (localQuery.trim()) onSearch(localQuery);
+    onSearch(localQuery); // Si está vacío, Home limpia resultados
   };
 
   return (
