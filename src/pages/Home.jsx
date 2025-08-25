@@ -8,6 +8,12 @@ export default function Home() {
   const { query, books, updateSearch } = useContext(SearchContext);
 
   const handleSearch = async (searchQuery) => {
+    if (!searchQuery.trim()) {
+      // Si el input está vacío, limpia resultados
+      updateSearch("", []);
+      return;
+    }
+
     const results = await searchBooks(searchQuery);
     updateSearch(searchQuery, results);
   };
