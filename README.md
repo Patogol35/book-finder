@@ -4,7 +4,9 @@ Este proyecto es una aplicación web que permite buscar libros por título o aut
 
 ---
 
-Ver la aplicación desplegada en Vercel:
+💻 Ver la aplicación desplegada en Vercel:
+
+https://jorgepatriciosantamariacherrezbookf.vercel.app/
 
 ---
 
