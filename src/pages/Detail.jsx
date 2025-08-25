@@ -17,7 +17,7 @@ export default function Detail() {
   return (
     <div className="detail-container">
       <h1>{info.title}</h1>
-      <p className="author">{info.authors?.join(", ")}</p>
+      <p className="author">{info.authors?.join(", ") || "Autor desconocido"}</p>
       <img
         src={info.imageLinks?.thumbnail || "https://via.placeholder.com/200"}
         alt={info.title}
