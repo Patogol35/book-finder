@@ -8,7 +8,7 @@ export default function App() {
   return (
     <FavoritesProvider>
       <Router>
-        <nav className="bg-gray-800 text-white p-4 flex gap-4">
+        <nav>
           <Link to="/">Inicio</Link>
           <Link to="/favorites">Favoritos</Link>
         </nav>
