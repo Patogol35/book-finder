@@ -1,67 +1,34 @@
-/* === Reset y base === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Contenedor general */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* === Navbar === */
-nav {
-  background: linear-gradient(90deg, #2563eb, #4f46e5);
-  padding: 1rem 2rem;
-  display: flex;
-  gap: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-nav a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #facc15; /* Amarillo dorado */
-}
-
-/* === Contenedores principales === */
-.container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h1 {
+/* Título */
+.page-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #1f2937;
 }
 
-p.empty {
+/* Texto vacío */
+.empty {
   color: #777;
   font-style: italic;
 }
 
-/* === Grid de libros === */
-
+/* Grid de libros */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  justify-items: center;
   gap: 2rem;
+  justify-items: center;
+  align-items: start;
   margin-top: 2rem;
 }
 
+/* Tarjeta de libro */
 .book-card {
   background: #fff;
   border-radius: 16px;
@@ -156,41 +123,4 @@ p.empty {
 
 .book-card button.remove:hover {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
-}
-
-
-
-
-/* === Página de detalles === */
-.detail-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: white;
-  border-radius: 14px;
-  padding: 2rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-.detail-container h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
-}
-
-.detail-container p.author {
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.detail-container img {
-  display: block;
-  margin: 0 auto 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.detail-container p.description {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.7;
 }
