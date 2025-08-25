@@ -6,7 +6,6 @@ export default function BookCard({ book }) {
   const { favorites, addFavorite, removeFavorite } = useContext(FavoritesContext);
   const info = book.volumeInfo;
 
-  // Verificar si ya está en favoritos
   const isFavorite = favorites.some(fav => fav.id === book.id);
 
   return (
