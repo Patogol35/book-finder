@@ -47,19 +47,35 @@ Si el input se borra y haces submit, los resultados desaparecen automáticamente
 
 1.Clona el repositorio: 
 
+```bash
+
 git clone https://github.com/Patogol35/book-finder
+
+```
 
 2. Ingresa a la carpeta del proyecto:
 
+```bash
+
 cd book-finder
 
-3.Instala las dependencias: 
+```
+
+3.Instala las dependencias:  
+
+```bash
 
 npm install
 
-4.Ejecuta el proyecto:
+```
 
-npm run dev
+4.Ejecuta el proyecto: 
+
+```bash
+
+npm run dev 
+
+```
 
 5.Abre en el navegador:
 
