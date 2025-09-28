@@ -14,7 +14,7 @@ https://jorgepatriciosantamariacherrezbookf.vercel.app/
 
 - React (Vite)
 - JavaScript (ES6+)
-- CSS puro (estilo moderno)
+- CSS 
 - Google Books API
 - LocalStorage
 
