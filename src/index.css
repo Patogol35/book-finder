@@ -1,107 +1,168 @@
+/* ----------- ESTILOS GENERALES ----------- */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: #f5f7fa;
+  color: #2d3436;
+  line-height: 1.6;
 }
 
+/* ----------- NAVBAR ----------- */
 nav {
-  background-color: #2d3436;
-  padding: 1rem;
+  background: linear-gradient(90deg, #2d3436, #0984e3);
+  padding: 1rem 2rem;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #74b9ff;
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #dfe6e9;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ----------- CONTENEDOR PRINCIPAL ----------- */
 .container {
   max-width: 1200px;
-  margin: auto;
-  padding: 1rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
+/* ----------- FORMULARIO ----------- */
 form {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
 
 input[type="text"] {
   flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0984e3;
+  box-shadow: 0 0 0 3px rgba(9,132,227,0.2);
+  outline: none;
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.2rem;
   border: none;
   background-color: #0984e3;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: #74b9ff;
+  transform: translateY(-2px);
 }
 
+/* ----------- GRID DE TARJETAS ----------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
+/* ----------- TARJETAS ----------- */
 .card {
   background-color: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .card img {
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.03);
 }
 
 .card h3 {
-  font-size: 1.1rem;
-  margin: 0.3rem 0;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #2d3436;
 }
 
 .card p {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: #636e72;
+  margin-bottom: 1rem;
 }
 
+/* ----------- ACCIONES ----------- */
 .card .actions {
   margin-top: auto;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 
 .card .actions a,
 .card .actions button {
   flex: 1;
   text-align: center;
-  padding: 0.4rem;
-  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
   text-decoration: none;
   border: none;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
+/* ----------- BOTONES ----------- */
 .btn-green {
   background-color: #00b894;
   color: white;
@@ -109,13 +170,31 @@ button:hover {
 
 .btn-green:hover {
   background-color: #55efc4;
+  transform: translateY(-2px);
 }
 
 .btn-yellow {
   background-color: #fdcb6e;
-  color: white;
+  color: #2d3436;
 }
 
 .btn-yellow:hover {
   background-color: #ffeaa7;
+  transform: translateY(-2px);
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .card img {
+    height: 160px;
+  }
 }
